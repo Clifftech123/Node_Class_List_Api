@@ -1,14 +1,6 @@
 
 // The interfere manege the types in the array object 
-interface Members{
-    Position: number
-    BillionaireName: string
-    NetWorth: number
-    Company: string
-    Country:string
-}
-
-const ListMembers: Members[] = [
+const ListMembers = [
     {
         Position: 0,
         BillionaireName:'Jeff Bezos',

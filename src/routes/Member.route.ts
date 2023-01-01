@@ -10,7 +10,11 @@ MembersRoute.use((req:Request, res:Response, next:NextFunction) => {
 });
 
 
-// Get all the data 
+// Get all  the data  Routing 
 MembersRoute.get("/", getAllMembers);
+
+
+// getting single data
+MembersRoute.get("/ :MemberId", MembersRoute);
 
 export default MembersRoute
