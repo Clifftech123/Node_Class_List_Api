@@ -12,7 +12,10 @@ router.get( "/:id", getMember );
 
 // post member in the server
 
-router.post("/", postMember );
+router.post("/", postMember);
+
+// update member in the server
+
 
 
 
