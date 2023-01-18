@@ -1,13 +1,13 @@
-import express from "express";
+import express from 'express';
 import bodyParser from "body-parser";
 import Moment from "moment/moment.js";
-import membersRoute from "./routes/membersRoute.js";
+import membersRoute from "./Routes/membersRoute";
+import {Request , Response , NextFunction } from 'express' //
 
-
-const app = express();
+const app: express.Application = express()
 
 // middleware the print  the url and the time it made the request
-app.use( ( req, res, next ) => {
+app.use( ( req:Request, res:Response, next:NextFunction ) => {
     const start = Date.now();
     next();
     const delta = Date.now() - start;
@@ -17,7 +17,7 @@ app.use( ( req, res, next ) => {
  
 
 // middleware the print  the url and the time it made the request
-app.use( ( req, res, next ) => {
+app.use((req: Request, res:Response, next:NextFunction ) => {
 	console.log(
 		`${req.protocol}://${req.get( "host" )}${req.originalUrl
 		} : ${Moment().format()}`
@@ -27,7 +27,7 @@ app.use( ( req, res, next ) => {
 
 
 // port to run the server
-const PORT = 3000;
+const PORT:number = 3000;
 app.listen(PORT, () =>
 	console.log(`Server running on port: http://localhost:${PORT}`)
 );

@@ -1,5 +1,6 @@
 import express from "express";
-import { getMembers, getMember, postMember } from "../controllers/members.js";
+import {getMembers, getMember, postMember} from "../controllers/members";
+
 
 const router = express.Router();
 // Get all members in the server
@@ -11,7 +12,7 @@ router.get( "/:id", getMember );
 
 // post member in the server
 
-router.post( "/", postMember );
+router.post("/", postMember );
 
 
 

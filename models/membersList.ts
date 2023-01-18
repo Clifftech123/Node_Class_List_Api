@@ -1,4 +1,4 @@
-export const Members = [
+ const Members = [
 	{
 		id: 1,
 		name: "Elon Musk",
@@ -32,3 +32,5 @@ export const Members = [
 		Industry: "Technology",
 	},
 ];
+
+export default Members;
