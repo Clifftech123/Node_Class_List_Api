@@ -27,7 +27,7 @@ app.use((req: Request, res:Response, next:NextFunction ) => {
 
 
 // port to run the server
-const PORT:number = 3000;
+const PORT:number = 3001;
 app.listen(PORT, () =>
 	console.log(`Server running on port: http://localhost:${PORT}`)
 );
