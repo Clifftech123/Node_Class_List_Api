@@ -1,5 +1,4 @@
 import Members from "../models/membersList";
-
 import {Request, Response, NextFunction} from 'express' //
 
 
@@ -26,11 +25,9 @@ export const getMember = (req: Request, res: Response) => {
 
 // post member in the server
 export const postMember = (req: Request, res: Response) => {
-   
-
 	// crating a and returning the new member
 	const newMember = {
-		id: Members.length + 1,
+		id: Number(req.body.id),
 		name: String(req.body.name),
 		Networth: String(req.body.Networth),
 		Age: Number(req.body.Age),
