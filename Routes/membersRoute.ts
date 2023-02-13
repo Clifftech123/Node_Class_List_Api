@@ -1,9 +1,5 @@
 import express from "express";
-
 import {getMembers, getMember, postMember, updateMember, deleteMember} from "../controllers/members";
-
-
-
 
 const router = express.Router();
 // Get all members in the server

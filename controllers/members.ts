@@ -20,8 +20,11 @@ export const getMember = (req: Request, res: Response) => {
 	} else {
 		res.status(404).json({msg: `No member with the id of ${req.params.id}`});
 	
+	}
+	
 }
-}
+
+
 
 // post member in the server
 export const postMember = (req: Request, res: Response) => {
@@ -47,6 +50,7 @@ export const postMember = (req: Request, res: Response) => {
 }
 
 
+
 // update member in the server
 export const updateMember = (req: Request, res: Response) => {
 	//  We are checking if  member is already in the array 
@@ -70,7 +74,6 @@ export const updateMember = (req: Request, res: Response) => {
 	
 }
 }
-
 
 // delete member in the server
 // ==  Delete for the server == 
