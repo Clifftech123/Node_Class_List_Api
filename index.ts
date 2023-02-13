@@ -5,6 +5,8 @@ import membersRoute from "./Routes/membersRoute";
 import {Request , Response , NextFunction } from 'express' //
 
 const app: express.Application = express()
+app.use(express.json)
+app.use(express.urlencoded({ extended: true }))
 
 // middleware the print  the url and the time it made the request
 app.use( ( req:Request, res:Response, next:NextFunction ) => {
