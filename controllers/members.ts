@@ -6,7 +6,7 @@ import {Request, Response, NextFunction} from 'express' //
 // Get all members in the server
 export const getMembers = (req:Request, res:Response) => {
 	console.log(`Users in the database: ${Members}`);
-	res.send(Members);
+	res.json(Members);
 };
 
 // get sing member   in the server

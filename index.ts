@@ -2,11 +2,11 @@ import express from 'express';
 import bodyParser from "body-parser";
 import Moment from "moment/moment.js";
 import membersRoute from "./Routes/membersRoute";
-import {Request , Response , NextFunction } from 'express' //
+import {Request, Response, NextFunction, Application} from 'express' //
 
 const app: express.Application = express()
-app.use(express.json)
-app.use(express.urlencoded({ extended: true }))
+
+
 
 // middleware the print  the url and the time it made the request
 app.use( ( req:Request, res:Response, next:NextFunction ) => {
@@ -29,7 +29,7 @@ app.use((req: Request, res:Response, next:NextFunction ) => {
 
 
 // port to run the server
-const PORT:number = 3001;
+const PORT:number = 4000;
 app.listen(PORT, () =>
 	console.log(`Server running on port: http://localhost:${PORT}`)
 );
